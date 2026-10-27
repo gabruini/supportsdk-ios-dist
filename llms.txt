@@ -2,7 +2,7 @@
 
 > Public binary Swift package, iOS 17+, SwiftUI and UIKit. No third-party runtime dependencies.
 
-Published: 0.1.2. F11 additions below require 0.1.2; verify Package.swift and the installed tag before using them.
+Published: 0.1.3. F11 additions below require 0.1.2; verify Package.swift and the installed tag before using them.
 Never claim an API exists in 0.1.1 merely because it appears on main.
 
 ## Guides

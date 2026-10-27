@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+Update the chat interface: a centered title capsule, a welcome shown only before the first message, grouped sender labels, stable message alignment when the keyboard appears, and an animated close. Remove the keyboard toolbar button; tapping outside the composer dismisses the keyboard and preserves the draft.
+
 ## 0.1.2
 
 F11 integration tooling: verifiable setup with a persisted idempotent test attempt, sanitized timeout/error reports and separate acceptance/reply/unread/read evidence. Added bundle ID reporting and validation, observable UIKit unread notifications, and an isolated Debug simulator preview artifact. Release frameworks never activate previews.

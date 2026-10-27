@@ -2,7 +2,7 @@
 
 Binary Swift package for iOS 17+, Swift 6, SwiftUI and UIKit. No third-party runtime dependencies.
 
-Version 0.1.2. The signed XCFramework, checksum and matching dSYMs are available in [GitHub Releases](https://github.com/gabruini/supportsdk-ios-dist/releases/tag/0.1.2).
+Version 0.1.3. The signed XCFramework, checksum and matching dSYMs are available in [GitHub Releases](https://github.com/gabruini/supportsdk-ios-dist/releases/tag/0.1.3).
 
 Version 0.1.1 remains available for existing integrations.
 
