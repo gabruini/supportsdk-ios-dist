@@ -1,4 +1,4 @@
-# Messages and local data — 0.1.0
+# Messages and local data — 0.1.1
 
 A message marked sent has been **accepted by the server**. This does not mean an agent replied or read it. An incoming agent message is a separate event; the unread badge changes after synchronization and a successful read update.
 

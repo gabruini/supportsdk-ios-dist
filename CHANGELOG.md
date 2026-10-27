@@ -1,6 +1,12 @@
 # Changelog
 
-## 0.1.0
+## 0.1.1
+
+Fix ZIP packaging so SwiftPM preserves the Apple Distribution signature: exclude AppleDouble metadata and verify the signature after a literal ZIP extraction.
+
+## 0.1.0 — superseded
+
+The original archive contained AppleDouble sidecars that made Xcode reject its signature after SwiftPM extraction. Use 0.1.1. The original artifacts remain available for traceability.
 
 Initial binary release for iOS 17 and Swift 6. SwiftUI/UIKit chat and launchers, remote theme, service availability, realtime recovery and idempotent offline sending.
 

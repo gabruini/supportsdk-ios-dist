@@ -1,4 +1,4 @@
-# App Store privacy — 0.1.0
+# App Store privacy — 0.1.1
 
 Review the SDK's contribution together with your app's own practices when filling App Store Connect. Apple's [App Privacy Details](https://developer.apple.com/app-store/app-privacy-details/) cover third-party SDK collection as well as your code.
 

@@ -2,7 +2,7 @@
 
 Binary Swift package for iOS 17+, Swift 6, SwiftUI and UIKit. No third-party runtime dependencies.
 
-Version 0.1.0. The signed XCFramework, checksum and matching dSYMs are available in [GitHub Releases](https://github.com/gabruini/supportsdk-ios-dist/releases/tag/0.1.0).
+Version 0.1.1. The signed XCFramework, checksum and matching dSYMs are available in [GitHub Releases](https://github.com/gabruini/supportsdk-ios-dist/releases/tag/0.1.1).
 
 Add `https://github.com/gabruini/supportsdk-ios-dist` in Xcode → Package Dependencies, then link the `SupportSDK` product.
 
@@ -22,4 +22,4 @@ The dashboard's **App ID pubblico** is the existing `pk_live_…`/`pk_test_…` 
 - [Data deletion and logout](data-deletion.md)
 - [App Store privacy](privacy.md)
 
-All guides describe 0.1.0. Internal previews using `configure(appKey:)`, static `userHash` or `x-app-key` must migrate before adopting this release.
+All guides describe 0.1.1. Internal previews using `configure(appKey:)`, static `userHash` or `x-app-key` must migrate before adopting this release.

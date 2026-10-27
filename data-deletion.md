@@ -1,4 +1,4 @@
-# Logout and deletion — 0.1.0
+# Logout and deletion — 0.1.1
 
 ```swift
 try await SupportSDK.logout() // reset() is an alias. Remote history is retained.

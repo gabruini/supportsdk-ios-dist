@@ -1,4 +1,4 @@
-# Integration — 0.1.0
+# Integration — 0.1.1
 
 Configure on the MainActor before using the SDK. During this preview the default gateway is SupportSDK staging. Use the explicit `gatewayURL:` argument for local development; HTTP is accepted only on loopback.
 
