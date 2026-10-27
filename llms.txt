@@ -1,0 +1,22 @@
+# SupportSDK iOS
+
+> Public binary Swift package, iOS 17+, SwiftUI and UIKit. No third-party runtime dependencies.
+
+Published: 0.1.2. F11 additions below require 0.1.2; verify Package.swift and the installed tag before using them.
+Never claim an API exists in 0.1.1 merely because it appears on main.
+
+## Guides
+- [API and installation](README.md)
+- [Agent integration workflow](agent-integration.md)
+- [Identity and presentation](integration.md)
+- [Custom entry and unread](custom-entry.md)
+- [Verifiable setup and simulator previews](setup-verification.md)
+- [Backend JWT recipes](backend-identity.md)
+- [Offline, drafts, retry, account changes](behavior.md)
+- [Deletion and retry](data-deletion.md)
+- [App Store privacy](privacy.md)
+
+## Rules
+- Configure with the public appId on the MainActor. Secrets remain on the customer's authenticated backend.
+- No metadata, profile collection, push, React Native, paywall or review APIs are supported.
+- Check real receipts; build success is not delivery. Keep pending work explicit.

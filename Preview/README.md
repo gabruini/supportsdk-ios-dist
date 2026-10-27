@@ -1,0 +1,1 @@
+Debug simulator tooling only. To use this preview, download this folder as a local package and add it in Xcode with Add Local Package. Its manifest downloads the matching preview ZIP from this release. Replace it with the normal release package before building or shipping for a device.
