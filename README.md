@@ -1,5 +1,25 @@
 # SupportSDK for iOS
 
-Binary distribution of SupportSDK via Swift Package Manager.
+Binary Swift package for iOS 17+, Swift 6, SwiftUI and UIKit. No third-party runtime dependencies.
 
-Not released yet.
+Version 0.1.0. The signed XCFramework, checksum and matching dSYMs are available in [GitHub Releases](https://github.com/gabruini/supportsdk-ios-dist/releases/tag/0.1.0).
+
+Add `https://github.com/gabruini/supportsdk-ios-dist` in Xcode → Package Dependencies, then link the `SupportSDK` product.
+
+```swift
+import SupportSDK
+
+// MainActor, once at app startup. This value is public and may be shipped in the app.
+try SupportSDK.configure(appId: "pk_live_YOUR_32_CHARACTER_PUBLIC_APP_ID")
+SupportSDK.open()
+SupportSDK.close()
+```
+
+The dashboard's **App ID pubblico** is the existing `pk_live_…`/`pk_test_…` value stored as `public_key`. It is different from the internal app UUID. It authorizes configuration and anonymous session creation, never access to another user's conversations. SDK HTTP requests use `x-app-id`.
+
+- [Integration, identity and presentation](integration.md)
+- [Messages, offline use, cache and drafts](behavior.md)
+- [Data deletion and logout](data-deletion.md)
+- [App Store privacy](privacy.md)
+
+All guides describe 0.1.0. Internal previews using `configure(appKey:)`, static `userHash` or `x-app-key` must migrate before adopting this release.
