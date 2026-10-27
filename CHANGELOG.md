@@ -4,7 +4,7 @@
 
 F11 integration tooling: verifiable setup with a persisted idempotent test attempt, sanitized timeout/error reports and separate acceptance/reply/unread/read evidence. Added bundle ID reporting and validation, observable UIKit unread notifications, and an isolated Debug simulator preview artifact. Release frameworks never activate previews.
 
-Added version-aware agent guides, custom entry and badge recipes, Firebase/Supabase/backend JWT examples and screenshot workflow. Backend and public release deployment are still pending; local checks are not evidence of publication.
+Added version-aware agent guides, custom entry and badge recipes, Firebase/Supabase/backend JWT examples and screenshot workflow. Release 0.1.2 and staging deployment were verified from a Mac without GitHub Actions.
 
 ## 0.1.1
 
