@@ -15,3 +15,5 @@ Use short messages in the developer's language. Ask only for real decisions with
 ## Generated project resources
 
 After adding localization files, regenerate the project and compile the generated resource accessors too. With Tuist string accessors, use unique semantic localization keys such as `support.account.delete.confirmTitle`: keys differing only in punctuation (for example `Delete account` and `Delete account?`) can generate the same Swift identifier. Fix the keys and their call sites when the compiler reports a duplicate declaration; do not remove translations or skip the failing generated source to claim a successful build.
+
+For a plain `.xcodeproj`, keep application sources and the project unchanged until the developer confirms that the manual SPM dependency step is complete. Documentation and integration instructions can be prepared first; do not add unresolved SDK imports or calls in advance.
