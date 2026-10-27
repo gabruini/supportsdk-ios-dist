@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4
+
+Place the timestamp and delivery indicator inside each message bubble, removing the redundant visible sent label while preserving accessible delivery status and retry.
+
 ## 0.1.3
 
 Update the chat interface: a centered title capsule, a welcome shown only before the first message, grouped sender labels, stable message alignment when the keyboard appears, and an animated close. Remove the keyboard toolbar button; tapping outside the composer dismisses the keyboard and preserves the draft.
