@@ -24,3 +24,24 @@ Common recovery:
 | `storage` or `keychain` | Surface a recoverable local storage problem; retain deletion recovery state and retry |
 
 `reset()` is an alias of `logout()`. Neither is a troubleshooting shortcut for transient network failures.
+
+
+## AI assistance — 0.2.0
+
+When enabled and approved by the support team, the chat labels automated replies **AI assistant**. The message still uses the existing `agent` sender and includes a persistent `Assistente AI:` text prefix, so older binaries can display and recover it in the normal sequence. Optional author and handling metadata does not change read receipts or unread counts.
+
+While the assistant prepares a reply, the chat shows a processing status. **Talk to a person** sends a normal textual request through the persistent outbox. It preserves your draft and selected attachments, works during generation, and reuses the message ID on retry. If offline, reconnect or retry the failed message; the team handoff is confirmed after server acceptance and synchronization. Older clients can type “I would like to speak to a person” or “Vorrei parlare con un operatore”. An automated reply never resolves the conversation by itself.
+
+After handoff, the support team handles subsequent messages. The conversation returns to AI when it is resolved, when a person returns it from the dashboard, or after 4 hours without messages if the team spoke last and the customer did not explicitly ask for a person. The SDK has no model selector or access to private knowledge documents, citations, internal proposals, or provider credentials.
+
+Available from 0.2.0. Earlier binaries show AI replies with the text prefix, without the processing status or the operator button.
+
+## AI consent and approved drafts — 0.2.0
+
+When your app uses AI in any mode (evaluation, team drafts or automated replies), the chat asks the end user for consent before their messages are sent to the AI provider. A panel above the composer shows the text and two equally weighted choices, **Allow** and **Team only**. It steps aside while the user types; until a choice is recorded, messages go to the team and no AI work runs. The server enforces the choice for each end user of your app, on all of their devices, and for the current version of the text.
+
+The chat menu (**…**) revokes consent; open requests handled by the assistant then pass to the team. A user who declined can reopen the text from the same menu; consent is never given without showing it again. Logout, `reset()` and data deletion start from a fresh anonymous user, who is asked again; identifying the same verified user again restores the choice recorded on the server. If the server publishes a newer text that this SDK version does not include, the SDK does not ask, and AI stays off for that user until you update the SDK.
+
+A reply that the support team sent from an AI draft without changes shows **Prepared with AI, checked by the support team** inside the message bubble. The sender is still the team; edited or written replies carry no label. Older binaries show these replies as normal team messages.
+
+The SDK exposes no public API to read or change consent: the choice belongs to the end user inside the chat.

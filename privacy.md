@@ -13,4 +13,6 @@ The SDK does not implement advertising tracking, collect IDFA, request location,
 
 The shipped `PrivacyInfo.xcprivacy` declares the categories above, no tracking and no tracking domains. There are no declared required-reason APIs in this version; Keychain, the SDK's own Application Support files and network communication implement storage and chat. Verify the aggregate privacy report in Xcode when adding other dependencies. The manifest does not replace App Store privacy answers, your privacy policy or your own retention/deletion obligations.
 
+**AI processing (0.2.0).** When your app enables AI in the dashboard, the text of chat messages may be sent to OpenAI, possibly outside the EU, only after the end user allows it inside the chat (App Review Guideline 5.1.2(i)). The data categories above do not change. Mention this processing and the consent in your privacy policy; the SDK's consent text does not replace it.
+
 Apple has narrowly defined optional-disclosure criteria for some support requests. The SDK's user identification and continued message synchronization do not establish that your app qualifies; do not automatically omit collection from your label. Check the current Apple rules for your actual flow.

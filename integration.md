@@ -2,12 +2,24 @@
 
 Configure on the MainActor before using the SDK. During this preview the default gateway is SupportSDK staging. Use the explicit `gatewayURL:` argument for local development; HTTP is accepted only on loopback.
 
+## Chat mode — 0.2.0
+
+The app admin chooses the mode in the dashboard, under *Identità e accesso*; the SDK reads it from the remote configuration.
+
+- **Anonymous** (default): anyone can write without an account. `SupportSDK.requiresAccount` is `false`, `identify(jwt:)` returns immediately without network requests, and a device that was identified starts again with a new anonymous chat. The previous history stays with the account and the support team keeps seeing it.
+- **With account**: only identified users can write. Before `identify(jwt:)` the chat shows a "sign in to contact support" screen instead of the conversation; afterwards the anonymous history joins the account.
+
+Ask your backend for a JWT only when `requiresAccount` is `true`. The value is observable from SwiftUI; UIKit can listen to `SupportSDK.requiresAccountDidChangeNotification` and identify when it becomes `true`. It stays `false` until the mode is known.
+
 ## Identity
 
 ```swift
-// Fetch from your backend using the app's authenticated session.
-let jwt = try await backend.fetchSupportIdentityToken()
-try await SupportSDK.identify(jwt: jwt)
+// Only when the admin chose the chat with account.
+if SupportSDK.requiresAccount {
+    // Fetch from your backend using the app's authenticated session.
+    let jwt = try await backend.fetchSupportIdentityToken()
+    try await SupportSDK.identify(jwt: jwt)
+}
 ```
 
 The backend signs HS256 JWTs using the app's identity secret, kept on the backend. Use `sub` for the authenticated user's stable ID, `aud` for the public appId, and integer seconds `iat` and `exp`. Include `typ: JWT` and `alg: HS256`. Lifetime: at most 900 seconds, recommended 600; clock tolerance: 30 seconds. A single exact audience is required. No email or other profile data is necessary in the JWT.

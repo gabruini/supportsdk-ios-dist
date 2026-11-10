@@ -86,6 +86,7 @@ This adapter is intentionally incomplete until it calls your actual authenticati
 
 ## Account lifecycle in the app
 
+- The endpoint is needed only when the dashboard sets the chat **with account** (`SupportSDK.requiresAccount == true`); with the anonymous chat skip it, `identify(jwt:)` does nothing.
 - At authenticated app launch/session restore and login, obtain a fresh JWT through the endpoint and call `try await SupportSDK.identify(jwt:)` before presenting authenticated history. Reconfirm on app-session renewal. JWT lifetime is at most 15 minutes; the SupportSDK device session lasts 30 days after the last successful identify. See [identity](integration.md).
 - Handle `pendingMessages` before changing accounts. Retry the same user's queue with `retryPendingMessages()`, or let the developer/user explicitly choose to discard via logout. Never silently discard or log out to fix a network problem. An uncertain identify must retry with a fresh JWT for the same intended user.
 - On actual logout call `try await SupportSDK.logout()` and handle errors. Close support before exposing another app account; do not show previous history while identity is unresolved. Account switching must await the chosen transition and fresh identify.
