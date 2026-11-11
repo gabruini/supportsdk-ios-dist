@@ -2,7 +2,9 @@
 
 Binary Swift package for iOS 17+, Swift 6, SwiftUI and UIKit. No third-party runtime dependencies.
 
-Version 0.2.0. The signed XCFramework, checksum and matching dSYMs are available in [GitHub Releases](https://github.com/gabruini/supportsdk-ios-dist/releases/tag/0.2.0).
+Version 0.3.0. The signed XCFramework, checksum and matching dSYMs are available in [GitHub Releases](https://github.com/gabruini/supportsdk-ios-dist/releases/tag/0.3.0).
+
+Version 0.3.0 adds the animated Zeus mascot, offer cards, feedback and optional native reviews. See the integration guides before enabling optional host callbacks.
 
 Version 0.1.1 remains available for existing integrations.
 
@@ -20,6 +22,8 @@ SupportSDK.close()
 The dashboard's **App ID pubblico** is the existing `pk_live_…`/`pk_test_…` value stored as `public_key`. It is different from the internal app UUID. It authorizes configuration and anonymous session creation, never access to another user's conversations. SDK HTTP requests use `x-app-id`.
 
 - [Integration, identity and presentation](integration.md)
+- [Feedback and native reviews — 0.3.0](feedback-and-reviews.md)
+- [Native assistant launcher — animated Zeus](mascot.md)
 - [Messages, offline use, cache and drafts](behavior.md)
 - [Data deletion and logout](data-deletion.md)
 - [App Store privacy](privacy.md)

@@ -17,3 +17,8 @@ Use short messages in the developer's language. Ask only for real decisions with
 After adding localization files, regenerate the project and compile the generated resource accessors too. With Tuist string accessors, use unique semantic localization keys such as `support.account.delete.confirmTitle`: keys differing only in punctuation (for example `Delete account` and `Delete account?`) can generate the same Swift identifier. Fix the keys and their call sites when the compiler reports a duplicate declaration; do not remove translations or skip the failing generated source to claim a successful build.
 
 For a plain `.xcodeproj`, keep application sources and the project unchanged until the developer confirms that the manual SPM dependency step is complete. Documentation and integration instructions can be prepared first; do not add unresolved SDK imports or calls in advance.
+
+
+## Offer cards — 0.1.5 candidate only
+
+Follow [offers.md](offers.md) only after checking the installed version. Register an app-owned `SupportPaywallHandler` before `configure`, allowlist Offering IDs and check store/provider eligibility. Do not substitute the current Offering or report a local callback as a confirmed purchase. Published 0.1.4 cannot open these cards. The isolated RevenueCat demo is a host-app example, not a dependency of the SDK binary.

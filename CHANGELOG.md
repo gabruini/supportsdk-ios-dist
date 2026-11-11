@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.3.0
+
+- Zeus uses the original artwork with occasional blinks and subtle eye movements. Animations pause offscreen, in the background and with Reduce Motion.
+
+### Native assistant launcher
+
+- Native mascot launcher with two presets, conversation states, short AI-only previews, edge tab and local hide/restore preferences.
+- Shares existing host/admin visibility controls; supports keyboard avoidance, Dynamic Type, VoiceOver actions and Reduce Motion.
+- Identity-scoped preference writes reject stale cache epochs. Older backend configurations remain readable; updated configuration requests negotiate `mascot_v1`.
+
+### Offers, feedback and native reviews
+
+Add versioned offer cards, authenticated activation and `registerPaywallHandler` for an app-owned paywall. Register before configure to advertise `offers_v1`. Unknown cards retain fallback text. Local cancellation, presentation and unavailability never confirm a purchase. Includes an isolated RevenueCat 5.25.3 demo and synthetic StoreKit product.
+
+
+### Z4
+
+Add recipient-only activation of coupons for physical goods and services, support feedback on AI answers and resolved conversations, and optional native reviews at a host-chosen natural break. Coupon values stay in memory, outside the SDK disk cache. Review requests require admin and host opt-in, are consumed once by the server, and use StoreKit without a custom prompt or satisfaction filter. Requires the Z4 backend. Native review and resolution feedback were verified on a development iPhone; the full coupon/restart, accessibility and identity device checks remain open. These APIs are included in 0.3.0; the remaining device checks are not claimed complete.
+
+Ignore coupon activation and answer-feedback results that arrive after the target message has left chat history. Remove failed-vote state with the message; stale cards cannot start a new activation.
+
 ## 0.2.0
 
 Recognize AI replies without changing message sender values; retain the persistent AI text prefix for older clients. Show processing and human handling status, and add a Talk to a person action using the existing durable text outbox. Optional metadata is cached alongside history and unread counts. This candidate requires the KB6 backend and is not included in the published 0.1.4 binary.
