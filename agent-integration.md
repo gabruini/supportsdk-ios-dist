@@ -19,6 +19,6 @@ After adding localization files, regenerate the project and compile the generate
 For a plain `.xcodeproj`, keep application sources and the project unchanged until the developer confirms that the manual SPM dependency step is complete. Documentation and integration instructions can be prepared first; do not add unresolved SDK imports or calls in advance.
 
 
-## Offer cards — 0.1.5 candidate only
+## Offer cards — 0.3.0 and later
 
 Follow [offers.md](offers.md) only after checking the installed version. Register an app-owned `SupportPaywallHandler` before `configure`, allowlist Offering IDs and check store/provider eligibility. Do not substitute the current Offering or report a local callback as a confirmed purchase. Published 0.1.4 cannot open these cards. The isolated RevenueCat demo is a host-app example, not a dependency of the SDK binary.

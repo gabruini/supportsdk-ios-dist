@@ -13,12 +13,12 @@ Never claim an API exists in 0.1.1 merely because it appears on main.
 - [Verifiable setup and simulator previews](setup-verification.md)
 - [Backend JWT recipes](backend-identity.md)
 - [Offline, drafts, retry, account changes](behavior.md)
-- [Offer cards and app-owned paywalls — 0.1.5 candidate](offers.md)
-- [Feedback and native reviews — Z4 source candidate](feedback-and-reviews.md)
+- [Offer cards and app-owned paywalls — 0.3.0](offers.md)
+- [Feedback and native reviews — 0.3.0](feedback-and-reviews.md)
 - [Deletion and retry](data-deletion.md)
 - [App Store privacy](privacy.md)
 
 ## Rules
 - Configure with the public appId on the MainActor. Secrets remain on the customer's authenticated backend.
-- No metadata, profile collection, push or React Native APIs are supported. Published 0.1.4 has no review APIs and only reads offer fallback text. Paywall callbacks require the 0.1.5 candidate; coupons, feedback and host-controlled native reviews require the unreleased Z4 source candidate and backend. Do not call a review prompt from a button or select recipients from support votes.
+- No metadata, profile collection, push or React Native APIs are supported. Published 0.1.4 has no review APIs and only reads offer fallback text. Paywall callbacks require the 0.3.0; coupons, feedback and host-controlled native reviews require SDK 0.3.0 and the matching backend. Do not call a review prompt from a button or select recipients from support votes.
 - Check real receipts; build success is not delivery. Keep pending work explicit.
