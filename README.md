@@ -2,7 +2,7 @@
 
 Binary Swift package for iOS 17+, Swift 6, SwiftUI and UIKit. No third-party runtime dependencies.
 
-Version 0.3.0. The signed XCFramework, checksum and matching dSYMs are available in [GitHub Releases](https://github.com/gabruini/supportsdk-ios-dist/releases/tag/0.3.0).
+Version 0.3.1. The signed XCFramework, checksum and matching dSYMs are available in [GitHub Releases](https://github.com/gabruini/supportsdk-ios-dist/releases/tag/0.3.1).
 
 Version 0.3.0 adds the animated Zeus mascot, offer cards, feedback and optional native reviews. See the integration guides before enabling optional host callbacks.
 

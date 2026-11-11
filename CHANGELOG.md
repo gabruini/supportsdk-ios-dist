@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1
+
+Fix Debug preview textual interfaces by explicitly declaring the mascot fixture Sendable, matching the existing chat fixture.
+
 ## 0.3.0
 
 - Zeus uses the original artwork with occasional blinks and subtle eye movements. Animations pause offscreen, in the background and with Reduce Motion.
