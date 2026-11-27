@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.2
+
+Fix a crash during synchronization. Dropping empty local conversations read the cached state while the same state was being modified, a Swift exclusivity violation that terminated the app. It occurred when the device had an empty local conversation without a remote id (created when the chat is opened) and the server returned at least one conversation. Recommended update for every 0.3.x integration. Adds a regression test.
+
 ## 0.3.1
 
 Fix Debug preview textual interfaces by explicitly declaring the mascot fixture Sendable, matching the existing chat fixture.
